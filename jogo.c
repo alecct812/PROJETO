@@ -175,9 +175,8 @@ int main() {
   Jogadores* ListaJogadores = NULL;
 
   char nomeJogador[50];
-  int points = 0, vitorias = 0;
-
-
+  int points = 0;
+  int vitorias = 0;
 
     // Países
     char paisesFaceis[10][50] = {"Brasil", "EstadosUnidos", "Canada", "Franca", "Alemanha", "Espanha", "Japao", "China", "India", "Russia"};
@@ -188,7 +187,7 @@ int main() {
                                   "Cazaquistão", "Quirguistão", "Suazilandia", "Tonga", "Tuvalu", "Butao", "Comores", "Lesoto", "Nauru", "Vanuatu"};
 
     // Futebol
-    char futebolLibertadores[10][50] = {"BocaJuniors", "RiverPlate", "Flamengo", "Palmeiras", "Gremio", "Santos", "Independiente", "Sao Paulo", "Nacional", "Penarol"};
+    char futebolLibertadores[10][50] = {"BocaJuniors", "RiverPlate", "Flamengo", "Palmeiras", "Gremio", "Santos", "Independiente", "SaoPaulo", "Nacional", "Penarol"};
     char futebolChampionsLeague[10][50] = {"RealMadrid", "Barcelona", "BayernDeMunique", "Liverpool", "ManchesterUnited", "ACMilan", "Juventus", "Ajax", "Chelsea", "InterDeMilao"};
 
     // Frutas
@@ -228,6 +227,7 @@ char palavramisteriosa[50];
 printf("Qual você deseja?\n 1 - Países\n 2 - Futebol\n 3 - Frutas\n 4 - Marcas de Carro\n 5 - Marcas de Tecnologia\n");
     scanf("%d",&escolha1);
     getchar();
+
     switch(escolha1){
     case(1):
     printf("Qual você deseja?\n 1 - Fácil\n 2 - Médio\n 3 - Difícil\n");
@@ -312,10 +312,9 @@ printf("Qual você deseja?\n 1 - Países\n 2 - Futebol\n 3 - Frutas\n 4 - Marcas
     int escolha;
 
 
-    points = forca(palavramisteriosa);
+    points += forca(palavramisteriosa);
     getchar();
 
-    ListaJogadores = addJogador(ListaJogadores,nomeJogador,points);
     
     printf("\nDeseja continuar?\n 1 - Sim\n 2 - Não\n");
     scanf("%d",&escolha);
@@ -326,6 +325,7 @@ printf("Qual você deseja?\n 1 - Países\n 2 - Futebol\n 3 - Frutas\n 4 - Marcas
     if(escolha==2){
       printf("\e[H\e[2J");
       printf(" Você acertou %d palavras",points);
+      ListaJogadores = addJogador(ListaJogadores,nomeJogador,points);
       break;
     }
    
