@@ -115,21 +115,21 @@ int main() {
     char paisesFaceis[10][50] = {"Brasil", "EstadosUnidos", "Canada", "Franca", "Alemanha", "Espanha", "Japao", "China", "India", "Russia"};
     char paisesMedios[20][50] = {"Brasil", "EstadosUnidos", "Canada", "Franca", "Alemanha", "Espanha", "Japao", "China", "India", "Russia",
                                 "Australia", "Mexico", "Italia", "Argentina", "CoreiaDoSul", "Turquia", "AfricaDoSul", "Egito", "Suecia", "Indonesia"};
-    char paisesDificeis[30][50] = {"Brasil", "EstadosUnidos", "Canada", "Franca", "Alemanha", "Espanha", "Japão", "China", "India", "Russia",
-                                  "Australia", "México", "Itália", "Argentina", "CoreiaDoSul", "Turquia", "ÁfricaDoSul", "Egito", "Suécia", "Indonésia",
-                                  "Cazaquistão", "Quirguistão", "Suazilandia", "Tonga", "Tuvalu", "Butao", "Comores", "Lesoto", "Nauru", "Vanuatu"};
+    char paisesDificeis[30][50] = {"Brasil", "EstadosUnidos", "Canada", "Franca", "Alemanha", "Espanha", "Japao", "China", "India", "Russia",
+                                  "Australia", "Mexico", "Italia", "Argentina", "CoreiaDoSul", "Turquia", "AfricaDoSul", "Egito", "Suecia", "Indonesia",
+                                  "Cazaquistao", "Quirguistao", "Suazilandia", "Tonga", "Tuvalu", "Butao", "Comores", "Lesoto", "Nauru", "Vanuatu"};
 
     // Futebol
     char futebolLibertadores[10][50] = {"BocaJuniors", "RiverPlate", "Flamengo", "Palmeiras", "Gremio", "Santos", "Independiente", "SaoPaulo", "Nacional", "Penarol"};
     char futebolChampionsLeague[10][50] = {"RealMadrid", "Barcelona", "BayernDeMunique", "Liverpool", "ManchesterUnited", "ACMilan", "Juventus", "Ajax", "Chelsea", "InterDeMilao"};
 
     // Frutas
-    char frutasFaceis[10][50] = {"Banana", "Maça", "Uva", "Pera", "Morango", "Abacaxi", "Melancia", "Manga", "Kiwi", "Abacate"};
-    char frutasMedias[20][50] = {"Banana", "Maça", "Uva", "Pera", "Morango", "Abacaxi", "Melancia", "Manga", "Kiwi", "Abacate", 
-                                "Maracuja", "Cereja", "Roma", "Pessego", "Coco", "Mamão", "Framboesa", "Groselha", "Ameixa", "Pitaya"};
-    char frutasDificeis[30][50] = {"Banana", "Maça", "Uva", "Pera", "Morango", "Abacaxi", "Melancia", "Manga", "Kiwi", "Abacate",
-                                  "Maracuja", "Cereja", "Roma", "Pessego", "Coco", "Mamão", "Framboesa", "Groselha", "Ameixa", "Pitaya",
-                                  "Jabuticaba", "Carambola", "Lichia", "Mangostão", "Rambuta", "Kiwano", "Nêspera", "Jatobá", "Graviola", "Sapoti"};
+    char frutasFaceis[10][50] = {"Banana", "Maca", "Uva", "Pera", "Morango", "Abacaxi", "Melancia", "Manga", "Kiwi", "Abacate"};
+    char frutasMedias[20][50] = {"Banana", "Maca", "Uva", "Pera", "Morango", "Abacaxi", "Melancia", "Manga", "Kiwi", "Abacate", 
+                                "Maracuja", "Cereja", "Roma", "Pessego", "Coco", "Mamao", "Framboesa", "Groselha", "Ameixa", "Pitaya"};
+    char frutasDificeis[30][50] = {"Banana", "Maca", "Uva", "Pera", "Morango", "Abacaxi", "Melancia", "Manga", "Kiwi", "Abacate",
+                                  "Maracuja", "Cereja", "Roma", "Pessego", "Coco", "Mamao", "Framboesa", "Groselha", "Ameixa", "Pitaya",
+                                  "Jabuticaba", "Carambola", "Lichia", "Mangostao", "Rambuta", "Kiwano", "Nespera", "Jatoba", "Graviola", "Sapoti"};
 
     // Marcas de Carro
     char marcasCarroFaceis[10][50] = {"Volkswagen", "Ford", "Toyota", "Honda", "Chevrolet", "Nissan", "Fiat", "Hyundai", "Renault", "Peugeot"};

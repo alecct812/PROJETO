@@ -8,11 +8,14 @@
 int forca(char palavra[50]) {
     int tamanho = strlen(palavra);
 
-    char palavracensurada[tamanho + 1];
+    char palavracensurada[tamanho * 2 + 1];
 
-    memset(palavracensurada, '_', tamanho);
-
-    palavracensurada[tamanho] = '\0';
+    // Preencher com espaços e underscores
+    for (int i = 0; i < tamanho * 2; i += 2) {
+        palavracensurada[i] = '_';
+        palavracensurada[i + 1] = ' ';
+    }
+    palavracensurada[tamanho * 2] = '\0';
 
     int erros = 0, acertos = 0, vitorias = 0;
     char jausadas[26]; // para letras do alfabeto apenas
@@ -22,28 +25,28 @@ int forca(char palavra[50]) {
         printf("\e[H\e[2J");
 
         printf("Palavra: %s\n", palavracensurada);
-        switch(erros){
-          case(0):
+        switch (erros) {
+        case (0):
             printf("______\n|    |\n|     \n|      \n|      \n");
-          break;
-          case(1):
+            break;
+        case (1):
             printf("______\n|    |\n|    O\n|      \n|      \n");
-          break;
-          case(2):
+            break;
+        case (2):
             printf("______\n|    |\n|    O\n|    | \n|      \n");
-          break;
-          case(3):
+            break;
+        case (3):
             printf("______\n|    |\n|    O\n|   /| \n|      \n");
-          break;
-          case(4):
+            break;
+        case (4):
             printf("______\n|    |\n|    O\n|   /|\\\n|      \n");
-          break;
-          case(5):
+            break;
+        case (5):
             printf("______\n|    |\n|    O\n|   /|\\\n|   /  \n");
-          break;
-          case(6):
+            break;
+        case (6):
             printf("______\n|    |\n|    O\n|   /|\\\n|   / \\\n");
-          break;
+            break;
         }
         printf("Letras usadas: ");
 
@@ -56,7 +59,7 @@ int forca(char palavra[50]) {
 
         printf("Digite uma letra: ");
         char ch;
-        scanf(" %c", &ch); // %c lê um caractere, espaço antes de %c para consumir espaços em branco
+        scanf(" %c", &ch);
 
         bool letraUsada = false;
         for (int i = 0; i < 26; i++) {
@@ -76,9 +79,11 @@ int forca(char palavra[50]) {
         bool encontrou = false;
         for (int i = 0; i < tamanho; i++) {
             if (palavra[i] == ch || palavra[i] == ch - 32) {
-              palavracensurada[i] = palavra[i];
-              acertos++;
-              encontrou = true;
+                // Coloca a letra na posição correta
+                palavracensurada[i * 2] = palavra[i];
+                palavracensurada[i * 2 + 1] = ' ';
+                acertos++;
+                encontrou = true;
             }
         }
 
@@ -90,9 +95,9 @@ int forca(char palavra[50]) {
     printf("\e[H\e[2J");
     if (acertos == tamanho) {
         printf("PARABÉNS!!! A palavra era: %s\n", palavra);
-      vitorias++;
+        vitorias++;
     } else {
         printf("Você perdeu! A palavra era: %s\n", palavra);
     }
-  return vitorias;
+    return vitorias;
 }
