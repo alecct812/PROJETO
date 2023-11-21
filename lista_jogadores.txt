@@ -1,0 +1,13 @@
+Jogador: alec  --->  Pontuação: 1 
+Jogador: alec  --->  Pontuação: 1 
+Jogador: alec  --->  Pontuação: 1 
+Jogador: alec2  --->  Pontuação: 1 
+Jogador: alec2  --->  Pontuação: 1 
+Jogador: alec3  --->  Pontuação: 1 
+Jogador: alec3  --->  Pontuação: 2 
+Jogador: Alec 4  --->  Pontuação: 3 
+Jogador: Alec 5   --->  Pontuação: 4 
+Jogador: Alec 6  --->  Pontuação: 1 
+Jogador: Alec 7  --->  Pontuação: 2 
+Jogador: felipee  --->  Pontuação: 1 
+Jogador: arthur  --->  Pontuação: 1 
