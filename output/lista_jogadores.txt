@@ -9,3 +9,7 @@ Jogador: Alec 4  --->  Pontuação: 3
 Jogador: Alec 5   --->  Pontuação: 4 
 Jogador: Alec 6  --->  Pontuação: 1 
 Jogador: Alec 7  --->  Pontuação: 2 
+Jogador: lucas ferraz  --->  Pontuação: 1 
+Jogador: felipeserpa  --->  Pontuação: 1 
+Jogador: asd  --->  Pontuação: 1 
+Jogador: asdww  --->  Pontuação: 3 
