@@ -1,0 +1,1 @@
+int forca(char palavra[50]);

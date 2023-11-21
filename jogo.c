@@ -4,6 +4,7 @@
 #include <string.h>
 #include <stdbool.h>
 #include <locale.h>
+#include "forcajogo.h"
 
 struct palavrascertas{
 char palavracerta[50];
@@ -96,75 +97,7 @@ void imprimirPalavraAleatoria(char array[][50], int tamanho,char palavra[50]) {
     printf("Palavra Aleatória: %s\n", array[indiceAleatorio]);
     strcpy(palavra,array[indiceAleatorio]);
 }
-int forca(char palavra[50]) {
-    int tamanho = strlen(palavra);
 
-    char palavracensurada[tamanho + 1];
-
-    memset(palavracensurada, '_', tamanho);
-
-    palavracensurada[tamanho] = '\0';
-
-    int erros = 0, acertos = 0, vitorias = 0;
-    char jausadas[26]; // para letras do alfabeto apenas
-    memset(jausadas, 0, sizeof(jausadas));
-
-    while (erros < 12 && acertos < tamanho) {
-        printf("\e[H\e[2J");
-
-        printf("Palavra: %s\n", palavracensurada);
-        printf("Erros = %d\n", erros);
-        printf("Letras usadas: ");
-
-        for (int i = 0; i < 26; i++) {
-            if (jausadas[i] != 0) {
-                printf("%c ", jausadas[i]);
-            }
-        }
-        printf("\n");
-
-        printf("Digite uma letra: ");
-        char ch;
-        scanf(" %c", &ch); // %c lê um caractere, espaço antes de %c para consumir espaços em branco
-
-        bool letraUsada = false;
-        for (int i = 0; i < 26; i++) {
-            if (jausadas[i] == ch) {
-                printf("Essa letra já foi usada. Tente outra.\n");
-                letraUsada = true;
-                break;
-            }
-        }
-
-        if (letraUsada) {
-            continue;
-        }
-
-        jausadas[ch - 'a'] = ch;
-
-        bool encontrou = false;
-        for (int i = 0; i < tamanho; i++) {
-            if (palavra[i] == ch || palavra[i] == ch - 32) {
-              palavracensurada[i] = palavra[i];
-              acertos++;
-              encontrou = true;
-            }
-        }
-
-        if (!encontrou) {
-            erros++;
-        }
-    }
-
-    printf("\e[H\e[2J");
-    if (acertos == tamanho) {
-        printf("PARABÉNS!!! A palavra era: %s\n", palavra);
-      vitorias++;
-    } else {
-        printf("Você perdeu! A palavra era: %s\n", palavra);
-    }
-  return vitorias;
-}
 
 int main() {
     // Inicializa a semente para a função rand() com base no tempo atual
@@ -182,21 +115,21 @@ int main() {
     char paisesFaceis[10][50] = {"Brasil", "EstadosUnidos", "Canada", "Franca", "Alemanha", "Espanha", "Japao", "China", "India", "Russia"};
     char paisesMedios[20][50] = {"Brasil", "EstadosUnidos", "Canada", "Franca", "Alemanha", "Espanha", "Japao", "China", "India", "Russia",
                                 "Australia", "Mexico", "Italia", "Argentina", "CoreiaDoSul", "Turquia", "AfricaDoSul", "Egito", "Suecia", "Indonesia"};
-    char paisesDificeis[30][50] = {"Brasil", "EstadosUnidos", "Canada", "Franca", "Alemanha", "Espanha", "Japão", "China", "India", "Russia",
-                                  "Australia", "México", "Itália", "Argentina", "CoreiaDoSul", "Turquia", "ÁfricaDoSul", "Egito", "Suécia", "Indonésia",
-                                  "Cazaquistão", "Quirguistão", "Suazilandia", "Tonga", "Tuvalu", "Butao", "Comores", "Lesoto", "Nauru", "Vanuatu"};
+    char paisesDificeis[30][50] = {"Brasil", "EstadosUnidos", "Canada", "Franca", "Alemanha", "Espanha", "Japao", "China", "India", "Russia",
+                                  "Australia", "Mexico", "Italia", "Argentina", "CoreiaDoSul", "Turquia", "AfricaDoSul", "Egito", "Suecia", "Indonesia",
+                                  "Cazaquistao", "Quirguistao", "Suazilandia", "Tonga", "Tuvalu", "Butao", "Comores", "Lesoto", "Nauru", "Vanuatu"};
 
     // Futebol
     char futebolLibertadores[10][50] = {"BocaJuniors", "RiverPlate", "Flamengo", "Palmeiras", "Gremio", "Santos", "Independiente", "SaoPaulo", "Nacional", "Penarol"};
     char futebolChampionsLeague[10][50] = {"RealMadrid", "Barcelona", "BayernDeMunique", "Liverpool", "ManchesterUnited", "ACMilan", "Juventus", "Ajax", "Chelsea", "InterDeMilao"};
 
     // Frutas
-    char frutasFaceis[10][50] = {"Banana", "Maça", "Uva", "Pera", "Morango", "Abacaxi", "Melancia", "Manga", "Kiwi", "Abacate"};
-    char frutasMedias[20][50] = {"Banana", "Maça", "Uva", "Pera", "Morango", "Abacaxi", "Melancia", "Manga", "Kiwi", "Abacate", 
-                                "Maracuja", "Cereja", "Roma", "Pessego", "Coco", "Mamão", "Framboesa", "Groselha", "Ameixa", "Pitaya"};
-    char frutasDificeis[30][50] = {"Banana", "Maça", "Uva", "Pera", "Morango", "Abacaxi", "Melancia", "Manga", "Kiwi", "Abacate",
-                                  "Maracuja", "Cereja", "Roma", "Pessego", "Coco", "Mamão", "Framboesa", "Groselha", "Ameixa", "Pitaya",
-                                  "Jabuticaba", "Carambola", "Lichia", "Mangostão", "Rambuta", "Kiwano", "Nêspera", "Jatobá", "Graviola", "Sapoti"};
+    char frutasFaceis[10][50] = {"Banana", "Maca", "Uva", "Pera", "Morango", "Abacaxi", "Melancia", "Manga", "Kiwi", "Abacate"};
+    char frutasMedias[20][50] = {"Banana", "Maca", "Uva", "Pera", "Morango", "Abacaxi", "Melancia", "Manga", "Kiwi", "Abacate", 
+                                "Maracuja", "Cereja", "Roma", "Pessego", "Coco", "Mamao", "Framboesa", "Groselha", "Ameixa", "Pitaya"};
+    char frutasDificeis[30][50] = {"Banana", "Maca", "Uva", "Pera", "Morango", "Abacaxi", "Melancia", "Manga", "Kiwi", "Abacate",
+                                  "Maracuja", "Cereja", "Roma", "Pessego", "Coco", "Mamao", "Framboesa", "Groselha", "Ameixa", "Pitaya",
+                                  "Jabuticaba", "Carambola", "Lichia", "Mangostao", "Rambuta", "Kiwano", "Nespera", "Jatoba", "Graviola", "Sapoti"};
 
     // Marcas de Carro
     char marcasCarroFaceis[10][50] = {"Volkswagen", "Ford", "Toyota", "Honda", "Chevrolet", "Nissan", "Fiat", "Hyundai", "Renault", "Peugeot"};
@@ -315,20 +248,20 @@ printf("Qual você deseja?\n 1 - Países\n 2 - Futebol\n 3 - Frutas\n 4 - Marcas
     points += forca(palavramisteriosa);
     getchar();
 
-    
+
     printf("\nDeseja continuar?\n 1 - Sim\n 2 - Não\n");
     scanf("%d",&escolha);
     getchar();
 
-   
+
 
     if(escolha==2){
       printf("\e[H\e[2J");
-      printf(" Você acertou %d palavras",points);
+      printf("O jogo foi finalizado!\nVocê acertou um total de %d palavra(s).",points);
       ListaJogadores = addJogador(ListaJogadores,nomeJogador,points);
       break;
     }
-   
+
 
   }
 
