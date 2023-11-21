@@ -11,3 +11,4 @@ Jogador: Alec 6  --->  Pontuação: 1
 Jogador: Alec 7  --->  Pontuação: 2 
 Jogador: felipee  --->  Pontuação: 1 
 Jogador: arthur  --->  Pontuação: 1 
+Jogador: asd  --->  Pontuação: 1 

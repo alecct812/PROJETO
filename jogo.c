@@ -265,7 +265,7 @@ printf("Qual você deseja?\n 1 - Países\n 2 - Futebol\n 3 - Frutas\n 4 - Marcas
 
   }
 
-  wArquivo_Lista(ListaJogadores, "output//lista_jogadores.txt");
+  wArquivo_Lista(ListaJogadores, "lista_jogadores.txt");
 
   freeLista(ListaJogadores);
 
