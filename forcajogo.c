@@ -10,7 +10,7 @@ int forca(char palavra[50]) {
 
     char palavracensurada[tamanho * 2 + 1];
 
-    // Preencher com espaços e underscores
+
     for (int i = 0; i < tamanho * 2; i += 2) {
         palavracensurada[i] = '_';
         palavracensurada[i + 1] = ' ';
@@ -18,7 +18,7 @@ int forca(char palavra[50]) {
     palavracensurada[tamanho * 2] = '\0';
 
     int erros = 0, acertos = 0, vitorias = 0;
-    char jausadas[26]; // para letras do alfabeto apenas
+    char jausadas[26];
     memset(jausadas, 0, sizeof(jausadas));
 
     while (erros < 6 && acertos < tamanho) {
@@ -79,7 +79,7 @@ int forca(char palavra[50]) {
         bool encontrou = false;
         for (int i = 0; i < tamanho; i++) {
             if (palavra[i] == ch || palavra[i] == ch - 32) {
-                // Coloca a letra na posição correta
+                
                 palavracensurada[i * 2] = palavra[i];
                 palavracensurada[i * 2 + 1] = ' ';
                 acertos++;

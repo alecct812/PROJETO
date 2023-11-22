@@ -31,7 +31,7 @@ Jogadores* createJogador(char name[50], int pontuacao)
   return novoJogador;
 }
 
-Jogadores* addJogador(Jogadores* head, char name[50], int pontuacao) //add no final da lista;
+Jogadores* addJogador(Jogadores* head, char name[50], int pontuacao) 
 {
   Jogadores* novoJogador = createJogador (name, pontuacao);
 
@@ -91,7 +91,6 @@ void wArquivo_Lista(Jogadores* head, const char* nomeArquivo)
 }
 
 
-// Função para imprimir uma palavra aleatória de um array
 void imprimirPalavraAleatoria(char array[][50], int tamanho,char palavra[50]) {
     int indiceAleatorio = rand() % tamanho;
     printf("Palavra Aleatória: %s\n", array[indiceAleatorio]);
@@ -100,7 +99,7 @@ void imprimirPalavraAleatoria(char array[][50], int tamanho,char palavra[50]) {
 
 
 int main() {
-    // Inicializa a semente para a função rand() com base no tempo atual
+    
     srand(time(NULL));
     setlocale(LC_ALL, "Portuguese");
 
@@ -111,7 +110,7 @@ int main() {
   int points = 0;
   int vitorias = 0;
 
-    // Países
+    
     char paisesFaceis[10][50] = {"Brasil", "EstadosUnidos", "Canada", "Franca", "Alemanha", "Espanha", "Japao", "China", "India", "Russia"};
     char paisesMedios[20][50] = {"Brasil", "EstadosUnidos", "Canada", "Franca", "Alemanha", "Espanha", "Japao", "China", "India", "Russia",
                                 "Australia", "Mexico", "Italia", "Argentina", "CoreiaDoSul", "Turquia", "AfricaDoSul", "Egito", "Suecia", "Indonesia"};
@@ -119,11 +118,11 @@ int main() {
                                   "Australia", "Mexico", "Italia", "Argentina", "CoreiaDoSul", "Turquia", "AfricaDoSul", "Egito", "Suecia", "Indonesia",
                                   "Cazaquistao", "Quirguistao", "Suazilandia", "Tonga", "Tuvalu", "Butao", "Comores", "Lesoto", "Nauru", "Vanuatu"};
 
-    // Futebol
+    
     char futebolLibertadores[10][50] = {"BocaJuniors", "RiverPlate", "Flamengo", "Palmeiras", "Gremio", "Santos", "Independiente", "SaoPaulo", "Nacional", "Penarol"};
     char futebolChampionsLeague[10][50] = {"RealMadrid", "Barcelona", "BayernDeMunique", "Liverpool", "ManchesterUnited", "ACMilan", "Juventus", "Ajax", "Chelsea", "InterDeMilao"};
 
-    // Frutas
+    
     char frutasFaceis[10][50] = {"Banana", "Maca", "Uva", "Pera", "Morango", "Abacaxi", "Melancia", "Manga", "Kiwi", "Abacate"};
     char frutasMedias[20][50] = {"Banana", "Maca", "Uva", "Pera", "Morango", "Abacaxi", "Melancia", "Manga", "Kiwi", "Abacate", 
                                 "Maracuja", "Cereja", "Roma", "Pessego", "Coco", "Mamao", "Framboesa", "Groselha", "Ameixa", "Pitaya"};
@@ -131,7 +130,7 @@ int main() {
                                   "Maracuja", "Cereja", "Roma", "Pessego", "Coco", "Mamao", "Framboesa", "Groselha", "Ameixa", "Pitaya",
                                   "Jabuticaba", "Carambola", "Lichia", "Mangostao", "Rambuta", "Kiwano", "Nespera", "Jatoba", "Graviola", "Sapoti"};
 
-    // Marcas de Carro
+    
     char marcasCarroFaceis[10][50] = {"Volkswagen", "Ford", "Toyota", "Honda", "Chevrolet", "Nissan", "Fiat", "Hyundai", "Renault", "Peugeot"};
     char marcasCarroMedias[20][50] = {"Volkswagen", "Ford", "Toyota", "Honda", "Chevrolet", "Nissan", "Fiat", "Hyundai", "Renault", "Peugeot",
                                     "Mercedes-Benz", "BMW", "Audi", "Subaru", "Mazda", "Kia", "Volvo", "Tesla", "Jaguar", "LandRover"};
@@ -139,7 +138,7 @@ int main() {
                                       "Mercedes-Benz", "BMW", "Audi", "Subaru", "Mazda", "Kia", "Volvo", "Tesla", "Jaguar", "LandRover",
                                       "Maserati", "Bugatti", "Pagani", "McLaren", "Koenigsegg", "Alfa Romeo", "Genesis", "Rivian", "Lucid", "Rimac"};
 
-    // Marcas de Tecnologia
+    
     char marcasTecnologiaFaceis[10][50] = {"Microsoft", "Dell", "HP", "Lenovo", "Acer", "Asus", "Sony", "LG", "Toshiba", "Panasonic"};
     char marcasTecnologiaMedias[20][50] = {"Microsoft", "Dell", "HP", "Lenovo", "Acer", "Asus", "Sony", "LG", "Toshiba", "Panasonic",
                                           "Apple", "Samsung", "Google", "Intel", "AMD", "NVIDIA", "Logitech", "Canon", "Epson", "Brother"};
