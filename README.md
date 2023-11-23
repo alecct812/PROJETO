@@ -11,4 +11,17 @@ Mais informações sobre o nosso projeto como as instruções de compilação e 
 
 <p><a href = "https://www.canva.com/design/DAF0uw0lPFI/R6FamW1gFNBCakw3YiKOCg/edit"> Nosso slide de apresentação</a>
 
+## Utilização
+Para executar o jogo perfeitamente siga esses passos:
+1) Organizar os arquivos .c .h e .txt dentro da pasta Projeto
+2) Inserir os seguintes comandos no terminal
+   
+       clang jogo.c forcajogo.c -o jogo.exe
+   
+
+       ./jogo.exe
+    
+
+        
+
  
